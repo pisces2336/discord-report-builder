@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-main>
-      <router-view />
-    </v-main>
-
-    <AppFooter />
+    <v-layuot style="overflow: visible">
+      <v-main class="py-5">
+        <router-view />
+      </v-main>
+    </v-layuot>
   </v-app>
 </template>
 
