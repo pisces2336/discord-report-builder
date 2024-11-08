@@ -1,1 +1,0 @@
-import{d as n,c as r,w as e,V as _,r as t,o as l,a as o,b as c}from"./index-CLkqXg5H.js";const d=n({__name:"default",setup(p){return(u,f)=>{const a=t("router-view"),s=t("v-layuot");return l(),r(_,null,{default:e(()=>[o(s,{style:{overflow:"visible"}},{default:e(()=>[o(c,{class:"py-5"},{default:e(()=>[o(a)]),_:1})]),_:1})]),_:1})}}});export{d as default};
