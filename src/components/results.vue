@@ -22,15 +22,15 @@
     report.value = '';
 
     const today = new Date().toLocaleDateString('ja-JP');
-    report.value += `# ${today} アルバイト\n`;
+    report.value += `# ${today} アルバイト`;
 
     store.events.forEach((event) => {
       if (!event.selected) return;
 
       report.value += '\n';
       report.value += `## ${event.title}\n`;
-      report.value += `### ${event.participants}\n`;
-      report.value += `${event.body}\n`;
+      report.value += `○${event.participants}\n`;
+      report.value += `${event.body}`;
     });
   };
 </script>
