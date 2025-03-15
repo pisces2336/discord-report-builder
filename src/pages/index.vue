@@ -60,6 +60,12 @@
       selected: false,
     },
     {
+      title: 'リファクタ会',
+      participants: '開発2課: 山田さん',
+      body: '・既存コードをきれいにする話し合い',
+      selected: false,
+    },
+    {
       title: 'スプリントプランニング',
       participants: '開発2課: 山田さん',
       body: '・来週実施のタスクについてコストの話し合い等',
