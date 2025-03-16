@@ -1,7 +1,18 @@
 <template>
   <v-card title="入力">
     <v-card-text>
-      <template v-for="(event, idx) in events" :key="`${idx}-${event.title}`">
+      <v-row>
+        <v-col cols="2" class="flex">
+          <v-text-field type="number" v-model="store.year" label="年" />
+        </v-col>
+        <v-col cols="2">
+          <v-text-field type="number" v-model="store.month" label="月" />
+        </v-col>
+        <v-col cols="2">
+          <v-text-field type="number" v-model="store.day" label="日" />
+        </v-col>
+      </v-row>
+      <template v-for="(event, idx) in store.events" :key="`${idx}-${event.title}`">
         <v-row v-if="event.selected">
           <v-col>
             <v-card :title="event.title" variant="outlined">
@@ -25,5 +36,4 @@
   import { useBuilderStore } from '@/stores/builderStore';
 
   const store = useBuilderStore();
-  const events = store.events;
 </script>

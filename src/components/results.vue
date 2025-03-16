@@ -17,12 +17,14 @@
     makeReport();
   });
 
+  onMounted(() => {
+    makeReport();
+  });
+
   const report = ref('');
   const makeReport = () => {
     report.value = '';
-
-    const today = getFormatDate(new Date());
-    report.value += `# ${today} アルバイト`;
+    report.value += `# ${getDate()} アルバイト`;
 
     store.events.forEach((event) => {
       if (!event.selected) return;
@@ -34,12 +36,9 @@
     });
   };
 
-  const getFormatDate = (date: Date): string => {
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
+  const getDate = (): string => {
+    const date = new Date(`${store.year}-${store.month}-${store.day}`);
     const weekday = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
-
-    return `${year}年${month}月${day}日(${weekday})`;
+    return `${store.year}年${store.month}月${store.day}日(${weekday})`;
   };
 </script>
